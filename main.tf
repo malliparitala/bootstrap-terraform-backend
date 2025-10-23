@@ -1,3 +1,13 @@
+terraform {
+    backend "remote" {
+        organization = "naga-paritala"
+
+        workspaces {
+            name = "bootstrap-terraform-backend"
+        }
+    }
+}
+
 provider "aws" {
     region = var.region
 }
